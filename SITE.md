@@ -34,16 +34,18 @@ app is signed and notarized, the Windows installer is not signed, and the app up
 | `index.html`, `styles.css`    | The page. Colours and type follow the app                     |
 | `main.js`                     | Download links from the latest release, and which installer suits the visitor |
 | `assets/hero.webp`            | The illustration on the app's start page                      |
-| `assets/step-*.webp`          | Screenshots of the app's demo project                         |
+| `assets/step-*.webp`          | Screenshots of the app with a real race (Kvarnsvedsträffen)   |
 | `assets/inter.woff2`          | Inter, under the SIL Open Font Licence (`inter-LICENSE.txt`)  |
 | `assets/tajga-logo-white.svg` | Tajga Studio's supplied white logo, used for the creator credit |
 
-To retake the screenshots, in the app's directory (they are 1440 × 900 at `--scale 2`):
+To retake the screenshots, in the app's directory (needs the race in `samples/kvarnsveden/`; they
+are 1440 × 900 at twice the size):
 
 ```sh
-pnpm shot --scale 2 --out tmp/site/layout.png --run "await page.waitForFunction(() => window.__hcs); \
-  await page.evaluate(() => window.__hcs.loadDemo({ prefill: true })); \
-  await page.getByRole('button', { name: /Layout/ }).click(); \
-  await page.evaluate(() => window.__hcs.playback.seek(200)); await page.waitForTimeout(1500)"
-cwebp -q 84 -resize 2400 0 tmp/site/layout.png -o ../headcam-studio-site/assets/step-layout.webp
+pnpm tsx scripts/site-shots.ts   # map.png, sync.png and layout.png in tmp/site/
+for step in map sync layout; do
+  cwebp -q 84 -resize 2400 0 tmp/site/$step.png -o ../headcam-studio-releases/assets/step-$step.webp
+done
 ```
+
+`--map`, `--sync` and `--layout` take the moment of the video to show, in seconds.

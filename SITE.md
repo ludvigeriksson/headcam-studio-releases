@@ -36,6 +36,7 @@ app is signed and notarized, the Windows installer is not signed, and the app up
 | `assets/hero.webp`            | The illustration on the app's start page                      |
 | `assets/step-*.webp`          | Screenshots of the app's demo project                         |
 | `assets/inter.woff2`          | Inter, under the SIL Open Font Licence (`inter-LICENSE.txt`)  |
+| `assets/tajga-logo-white.svg` | Tajga Studio's supplied white logo, used for the creator credit |
 
 To retake the screenshots, in the app's directory (they are 1440 × 900 at `--scale 2`):
 

@@ -413,6 +413,8 @@ code {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
   margin-top: clamp(72px, 11vw, 136px);
@@ -420,6 +422,32 @@ code {
   border-top: 1px solid var(--line);
   color: var(--ink-faint);
   font-size: 0.85rem;
+}
+
+.footer-product {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#footer-version:empty {
+  display: none;
+}
+
+.creator-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+
+.creator-credit:hover {
+  color: var(--ink);
+}
+
+.creator-credit img {
+  width: 120px;
 }
 
 [hidden] {

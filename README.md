@@ -6,6 +6,8 @@ Headcam Studio combines a video from your head-mounted camera with the GPS recor
 
 Built for orienteering, and works for running, cycling, skiing, hiking and other sports too. Everything stays on your computer; nothing is uploaded.
 
+Created by [Tajga Studio](https://tajgastudio.com/).
+
 ## Download
 
 **[Get the latest version](https://github.com/ludvigeriksson/headcam-studio-releases/releases/latest)** and pick the file for your computer:

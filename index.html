@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Headcam Studio — your race on video, with the map and the numbers</title>
+    <meta
+      name="description"
+      content="Headcam Studio turns headcam footage, a GPS recording and an orienteering map into a video with synced overlays: a map that follows the race leg by leg, pace, distance, heart rate and more. For macOS and Windows."
+    />
+    <meta property="og:title" content="Headcam Studio" />
+    <meta
+      property="og:description"
+      content="Your headcam footage with the map, the route and the numbers on top. For macOS and Windows."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0c0d0f" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icon-180.png" />
+    <link rel="preload" href="assets/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="#top">
+          <img src="assets/logo.svg" alt="" width="28" height="28" />
+          <span>Headcam Studio</span>
+        </a>
+        <nav aria-label="Sections">
+          <a href="#overlays">Overlays</a>
+          <a href="#how">How it works</a>
+          <a href="#files">Your files</a>
+          <a class="button small" href="#download">Download</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <p class="eyebrow">For orienteers, and anyone who films what they run</p>
+        <h1>Your race on video, with the map and the numbers on top</h1>
+        <p class="lead">
+          Headcam Studio takes your headcam footage, the GPS file from your watch and a picture of
+          the map, and makes a video where the map follows you leg by leg and the pace, distance and
+          heart rate keep time with the picture.
+        </p>
+        <div class="actions">
+          <a class="button" id="hero-download" href="#download">Download</a>
+          <a class="button ghost" href="#how">See how it works</a>
+        </div>
+        <p class="note" id="hero-note">For macOS and Windows.</p>
+        <img
+          class="hero-shot"
+          src="assets/hero.webp"
+          width="1408"
+          height="666"
+          alt="A headcam view of rocky forest with an orienteering map, pace, distance, heart rate and an elevation line laid over it"
+        />
+      </section>
+
+      <section id="overlays" class="wrap section">
+        <h2>What goes on top of the footage</h2>
+        <p class="section-lead">
+          Add as many as you like, put them where you want and style them to match. What you see
+          while editing is what ends up in the exported video.
+        </p>
+        <div class="grid">
+          <article class="card">
+            <h3>A map that follows the race</h3>
+            <p>
+              Your route is drawn onto the map as you run, with the leg you are on pointing up. The
+              map turns and zooms at each control, the way you turned it in your hand.
+            </p>
+          </article>
+          <article class="card">
+            <h3>A tail coloured by speed</h3>
+            <p>
+              The line behind you shows where you slowed down and where you ran. A close-up map can
+              sit beside the leg map for the detail around you.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Readouts for what your watch recorded</h3>
+            <p>
+              Time, distance, pace, heart rate, elevation, cadence, power. Each one is a widget with
+              its own font, colour, label and icon.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Graphs</h3>
+            <p>
+              An elevation profile along the bottom with a dot where you are, or the same for heart
+              rate or speed.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Split times</h3>
+            <p>
+              Leg times and placings from WinSplits Online or a result file, shown as you punch each
+              control.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Text, images and panels</h3>
+            <p>
+              A club logo, the name of the race, a dark panel to put the numbers on. Save the layout
+              and use it again for the next race.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how" class="wrap section">
+        <h2>From three files to a finished video</h2>
+        <p class="section-lead">Five steps, in order.</p>
+
+        <ol class="steps">
+          <li class="step text-only">
+            <div class="step-text">
+              <span class="step-number">1</span>
+              <h3>Choose your files</h3>
+              <p>
+                Say what you filmed, then pick the video, the GPS file and the map image, or drop
+                them on the window. A recording the camera split into several files is joined into
+                one.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-text">
+              <span class="step-number">2</span>
+              <h3>Click the course</h3>
+              <p>
+                Click the start, each control and the finish on the map. The app matches your route
+                to the course and works out when you were at each control. It then shows the race
+                time it arrived at, which should be your official time.
+              </p>
+              <p>The map does not have to be georeferenced. Any picture of it will do.</p>
+            </div>
+            <img
+              src="assets/step-map.webp"
+              width="2400"
+              height="1500"
+              loading="lazy"
+              alt="The Map step: an orienteering map with the course clicked in and the route laid over it"
+            />
+          </li>
+          <li class="step">
+            <div class="step-text">
+              <span class="step-number">3</span>
+              <h3>Line up video and GPS</h3>
+              <p>
+                Find the moment you set off in the video and say that this is the start. A strip
+                under the video shows your speed over the whole recording, so a sync that is off is
+                easy to see.
+              </p>
+            </div>
+            <img
+              src="assets/step-sync.webp"
+              width="2400"
+              height="1500"
+              loading="lazy"
+              alt="The Sync step: the video with overlays, and a strip showing speed over the whole recording"
+            />
+          </li>
+          <li class="step">
+            <div class="step-text">
+              <span class="step-number">4</span>
+              <h3>Lay it out</h3>
+              <p>
+                Drag widgets onto the video, resize them and change how they look. Start from the
+                layout the app suggests or from one you saved earlier.
+              </p>
+            </div>
+            <img
+              src="assets/step-layout.webp"
+              width="2400"
+              height="1500"
+              loading="lazy"
+              alt="The Layout step: a leg map selected on the video, with its settings in a panel on the right"
+            />
+          </li>
+          <li class="step text-only">
+            <div class="step-text">
+              <span class="step-number">5</span>
+              <h3>Export</h3>
+              <p>
+                Render an MP4 with the overlays burned in and the sound as it was: the whole
+                recording or just the race. It is ready to upload anywhere.
+              </p>
+            </div>
+          </li>
+        </ol>
+        <p class="caption">The screenshots show the demo project that comes with the app.</p>
+      </section>
+
+      <section id="files" class="wrap section">
+        <h2>Your files</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Video</h3>
+            <p>
+              MP4, MOV, MKV or WebM, as cameras and phones write them, including GoPro recordings
+              split into chapters. 4K HEVC needs a computer that can decode it; the app checks and
+              tells you.
+            </p>
+            <p class="fine">
+              Insta360 <code>.insv</code> files have to be exported from Insta360 Studio first.
+            </p>
+          </article>
+          <article class="card">
+            <h3>GPS recording</h3>
+            <p>
+              FIT, GPX or TCX, from your watch or exported from Livelox or Strava. Heart rate,
+              elevation, cadence and power are used when the file has them.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Map</h3>
+            <p>
+              Any image: PNG, JPEG, WebP or GIF. The course does not have to be printed on it,
+              though it is quicker when it is.
+            </p>
+            <p class="fine">Not an orienteer? Leave the map out and use the readouts and graphs.</p>
+          </article>
+        </div>
+        <div class="callout">
+          <h3>Everything stays on your computer</h3>
+          <p>
+            The video is made on your own machine. Nothing is uploaded and there is no account.
+            The app goes online for two things only: looking up split times, which asks WinSplits
+            Online for the result list, and checking whether there is a new version of itself.
+          </p>
+        </div>
+      </section>
+
+      <section id="download" class="wrap section">
+        <h2>Download</h2>
+        <p class="section-lead" id="download-lead">Headcam Studio runs on Mac and Windows computers.</p>
+
+        <div class="grid downloads" id="downloads">
+          <article class="card download" data-platform="mac-arm64">
+            <h3>Mac with Apple silicon</h3>
+            <p>M1 or later: most Macs from late 2020 on.</p>
+            <a class="button" href="https://github.com/ludvigeriksson/headcam-studio-releases/releases/latest">Download</a>
+            <p class="fine size"></p>
+          </article>
+          <article class="card download" data-platform="mac-x64">
+            <h3>Mac with Intel</h3>
+            <p>Older Macs with an Intel processor.</p>
+            <a class="button" href="https://github.com/ludvigeriksson/headcam-studio-releases/releases/latest">Download</a>
+            <p class="fine size"></p>
+          </article>
+          <article class="card download" data-platform="win-x64">
+            <h3>Windows</h3>
+            <p>Windows 10 or 11, 64-bit.</p>
+            <a class="button" href="https://github.com/ludvigeriksson/headcam-studio-releases/releases/latest">Download</a>
+            <p class="fine size"></p>
+          </article>
+        </div>
+        <p class="note" id="which-mac" hidden>
+          Not sure which Mac you have? Choose the Apple menu → About This Mac and look for “Chip”
+          (Apple silicon) or “Processor” (Intel).
+        </p>
+
+        <div class="first-run">
+          <h3>Installing and updating</h3>
+          <p>
+            Headcam Studio is in beta. Once installed it keeps itself up to date: a new version is
+            downloaded in the background and installed when you quit the app, or right away if you
+            choose <b>Restart to update</b>.
+          </p>
+          <div class="grid two">
+            <div>
+              <h4>macOS</h4>
+              <ol>
+                <li>Open the downloaded file and drag Headcam Studio to Applications.</li>
+                <li>
+                  Open it from there, not from the downloaded file. The app is signed and checked
+                  by Apple, so macOS only asks you to confirm that you want to open it.
+                </li>
+              </ol>
+            </div>
+            <div>
+              <h4>Windows</h4>
+              <ol>
+                <li>Run the downloaded installer.</li>
+                <li>
+                  The installer is not yet signed, so Windows warns about it once: on the
+                  SmartScreen warning choose <b>More info</b>, then <b>Run anyway</b>.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <span>Headcam Studio</span>
+      <span id="footer-version"></span>
+    </footer>
+  </body>
+</html>

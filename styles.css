@@ -354,6 +354,67 @@ code {
   font-size: 0.85rem;
 }
 
+/* Price */
+
+.prices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 760px;
+  margin-top: 36px;
+}
+
+.prices .card.suggested {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.prices .button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.card p.price {
+  color: var(--ink);
+  font-size: 2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.price small {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.ticks {
+  display: grid;
+  gap: 6px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+.ticks li {
+  display: flex;
+  gap: 10px;
+}
+
+.ticks li::before {
+  content: "✓";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ticks li.plain::before {
+  content: "•";
+  color: var(--ink-faint);
+}
+
 /* Download */
 
 .download .button {
@@ -456,7 +517,8 @@ code {
 
 @media (max-width: 860px) {
   .grid,
-  .grid.two {
+  .grid.two,
+  .prices {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Your licence · Headcam Studio</title>
+    <meta name="theme-color" content="#0c0d0f" />
+    <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="../assets/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="licence.css" />
+    <script src="licence.js" defer></script>
+  </head>
+  <body class="licence-page">
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="../">
+          <img src="../assets/logo.svg" alt="" width="28" height="28" />
+          <span>Headcam Studio</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="licence">
+      <!-- After checkout: the key that was bought. -->
+      <section class="licence-card" id="bought" hidden>
+        <div class="licence-icon done" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+        </div>
+        <h1>Thank you</h1>
+        <p class="licence-sub">Your licence key removes the watermark.</p>
+        <div class="licence-key">
+          <code id="key"></code>
+          <button class="licence-copy" id="copy" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="9" y="9" width="12" height="12" rx="2" />
+              <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+            </svg>
+            <span>Copy</span>
+          </button>
+        </div>
+        <a class="button licence-wide" id="open">Open in Headcam Studio</a>
+        <p class="licence-note" id="emailed" hidden></p>
+      </section>
+
+      <section class="licence-card" id="waiting" hidden>
+        <p class="licence-sub">Fetching your key…</p>
+      </section>
+
+      <!-- Without a checkout: find a key again. -->
+      <section class="licence-card" id="find">
+        <div class="licence-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <circle cx="8" cy="15" r="4" />
+            <path d="M11 12l9-9M17 6l3 3M15 8l2 2" />
+          </svg>
+        </div>
+        <h1>Lost your key?</h1>
+        <p class="licence-sub">We email it to the address you bought it with.</p>
+        <p class="licence-failed" id="failed" hidden></p>
+        <form id="find-form" class="licence-form">
+          <input id="email" type="email" required placeholder="you@example.com" autocomplete="email" />
+          <button class="button licence-wide" type="submit">Send my key</button>
+        </form>
+        <p class="licence-note" id="sent" hidden>
+          If a licence was bought with that address, the key is on its way. Check the spam folder too.
+        </p>
+        <p class="licence-note">
+          Manage or cancel at <a href="https://app.link.com" target="_blank" rel="noreferrer">app.link.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <div class="footer-product"><span>Headcam Studio</span></div>
+      <a class="creator-credit" href="https://tajgastudio.com/">
+        <span>Created by</span>
+        <img src="../assets/tajga-logo-white.svg" alt="Tajga Studio" width="120" height="25" />
+      </a>
+    </footer>
+  </body>
+</html>

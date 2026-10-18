@@ -2,12 +2,18 @@
 // server (the tajga-licensing worker) says which key was bought. Without it, the page offers to
 // email a lost key again.
 
-// The same as LICENCE_SERVER in the app.
-const SERVER = 'https://licence.tajga.studio'
+// The licence servers, as LICENCE_SERVERS in the app. A checkout in Stripe's sandbox (test cards)
+// comes back with `&sandbox`, and its key is on the sandbox server.
+const SERVERS = {
+  live: 'https://licence.tajga.studio',
+  sandbox: 'https://licence-sandbox.tajga.studio',
+}
 const APP = 'headcam-studio'
 
 const $ = (id) => document.getElementById(id)
-const session = new URLSearchParams(location.search).get('session')
+const query = new URLSearchParams(location.search)
+const session = query.get('session')
+const SERVER = query.has('sandbox') ? SERVERS.sandbox : SERVERS.live
 let key = ''
 
 // The key, with line breaks allowed after its dashes only.

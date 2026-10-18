@@ -34,7 +34,7 @@ app is signed and notarized, the Windows installer is not signed, and the app up
 | `index.html`, `styles.css`    | The page. Colours and type follow the app                     |
 | `main.js`                     | Download links from the latest release, and which installer suits the visitor |
 | `#price` in `index.html`      | Free (the one shown as the choice) and the licence side by side; "Buy a licence" goes straight to Checkout on the licence server. The price is written out here and in the app (`SHOP.price` in `src/core/licence/shop.ts`): change both with the Stripe price |
-| `licence/`                    | After checkout, the licence key that was bought (`?session=`); otherwise a form that emails a lost key again. Both ask the licence server (`tajga-licensing`), whose address is at the top of `licence.js` |
+| `licence/`                    | After checkout, the licence key that was bought (`?session=`); otherwise a form that emails a lost key again. Both ask the licence server (`tajga-licensing`), whose addresses are at the top of `licence.js`: the live one, or with `&sandbox` (a checkout in Stripe's sandbox) the sandbox one |
 | `assets/hero.webp`            | The illustration on the app's start page                      |
 | `assets/step-*.webp`          | Screenshots of the app with a real race (Kvarnsvedsträffen)   |
 | `assets/inter.woff2`          | Inter, under the SIL Open Font Licence (`inter-LICENSE.txt`)  |
